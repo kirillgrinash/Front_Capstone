@@ -2,14 +2,14 @@
   <div id="app">
     <!-- Header -->
     <header id="header">
-      <h1><a href="index.html">Future Imperfect</a></h1>
+      <h1><a href="/">Serenity</a></h1>
       <nav class="links">
         <ul>
-          <li><a href="/">Home</a></li>
           <li><a href="/posts">Posts</a></li>
           <li><a href="/signup">Signup</a></li>
           <li><a href="/login">Login</a></li>
           <li><a href="/logout">Logout</a></li>
+          <li><a href="/worker">Sample</a></li>
         </ul>
       </nav>
       <nav class="main">
@@ -47,7 +47,6 @@
         <li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
         <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
       </ul>
-      <p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
     </section>
   </div>
 </template>
