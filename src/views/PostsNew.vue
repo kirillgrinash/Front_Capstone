@@ -1,17 +1,35 @@
 <template>
-  <div class="posts-new">
-    <h1>New Post</h1>
-    <form v-on:submit.prevent="createPost()">
-      <ul>
-        <li v-for="error in errors">{{ error }}</li>
-      </ul>
-      Name: <input type="text" v-model="newPostName" />
-      Body: <input type="text" v-model="newPostBody" />
-      Image: <input type="text" v-model="newPostImage" />
-      <input type="submit" value="Create" />
-    </form>
+  <div id="post_new">
+    <div class="posts-new">
+      <h1>New Post</h1>
+      <form v-on:submit.prevent="createPost()">
+        <ul>
+          <li v-for="error in errors">{{ error }}</li>
+        </ul>
+        Name: <input type="text" v-model="newPostName" />
+        Body: <input type="text" v-model="newPostBody" />
+        Image: <input type="text" v-model="newPostImage" />
+        <input type="submit" value="Create" />
+      </form>
+    </div>
   </div>
 </template>
+
+<style>
+#post_new {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas {
+      position: absolute;
+    }
+</style>
 
 <script>
 import axios from "axios";

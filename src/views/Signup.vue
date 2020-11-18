@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="signup_page">
     <div class="signup">
       <form v-on:submit.prevent="submit()">
         <h1>Signup</h1>
@@ -27,6 +27,22 @@
     </div>
   </div>
 </template>
+
+<style>
+#signup_page {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas {
+      position: absolute;
+    }
+</style>
 
 <script>
 import axios from "axios";

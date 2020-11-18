@@ -43,7 +43,7 @@
 
 						<!-- Intro -->
 							<section id="intro">
-								<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+								<a href="#" class="logo"><img src="https://images.unsplash.com/photo-1495211895963-08d8812dcbf0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" /></a>
 								<header>
 									<h2>Kirill Grinash</h2>
 									<p>Juniors Data Information</p>
@@ -57,8 +57,7 @@
 									<!-- Mini Post -->
 										<article class="mini-post">
 											<header>
-												<h3><a href="single.html">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<h3><a href="single.html">Bobby Grinash</a></h3>
 												
 											</header>
 											<a href="single.html" class="image"><img src="images/pic04.jpg" alt="" /></a>
@@ -67,9 +66,8 @@
 									<!-- Mini Post -->
 										<article class="mini-post">
 											<header>
-												<h3><a href="single.html">Rutrum neque accumsan</a></h3>
-												<time class="published" datetime="2015-10-19">October 19, 2015</time>
-									
+												<h3><a href="single.html">Daisy Grinash</a></h3>
+												
 											</header>
 											<a href="single.html" class="image"><img src="images/pic05.jpg" alt="" /></a>
 										</article>
@@ -77,8 +75,7 @@
 									<!-- Mini Post -->
 										<article class="mini-post">
 											<header>
-												<h3><a href="single.html">Odio congue mattis</a></h3>
-												<time class="published" datetime="2015-10-18">October 18, 2015</time>
+												<h3><a href="single.html">Oliver Grinash</a></h3>
 												
 											</header>
 											<a href="single.html" class="image"><img src="images/pic06.jpg" alt="" /></a>
@@ -88,7 +85,7 @@
 							</section>
 
 						<!-- Posts List -->
-							<section>
+							<!-- <section>
 								<ul class="posts">
 									<li>
 										<article>
@@ -136,7 +133,7 @@
 										</article>
 									</li>
 								</ul>
-							</section>
+							</section> -->
 
 						<!-- About -->
 							<section class="blurb">
