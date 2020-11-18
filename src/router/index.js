@@ -6,7 +6,9 @@ import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
 import PostsNew from "../views/PostsNew.vue";
-import Worker from "../views/Worker.vue";
+import WebcamExample from "../views/WebcamExample.vue";
+import Juniors from "../views/JuniorsIndex.vue";
+
 
 
 Vue.use(VueRouter)
@@ -29,7 +31,8 @@ const routes = [
   { path: "/signup", name: "signup", component: Signup },
   { path: "/login", name: "login", component: Login },
   { path: "/logout", name: "logout", component: Logout },
-  { path: "/worker", name: "worker", component: Worker },
+  { path: "/webcamExample", name: "webcamExample", component: WebcamExample },
+  { path: "/juniorsIndex", name: "junior", component: Juniors},
   {
     path: "/posts/new",
     name: "posts-new",

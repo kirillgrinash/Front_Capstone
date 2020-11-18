@@ -1,11 +1,25 @@
 <template>
-<body>
-  <video id="video" width="720" height="560" autoplay muted></video>
-</body>
+    <div id="webcam">
+      <video id="video" width="720" height="560" autoplay muted></video>
+    </div>
 </template>
 
 <style>
+#webcam {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas {
+      position: absolute;
+    }
 </style>
+
 
 <script>
 export default {
@@ -36,7 +50,7 @@ function startVideo() {
 
 video.addEventListener('play', () => {
   const canvas = faceapi.createCanvasFromMedia(video)
-  document.body.append(canvas)
+  document.getElementById("webcam").append(canvas)
   const displaySize = { width: video.width, height: video.height }
   faceapi.matchDimensions(canvas, displaySize)
   setInterval(async () => {

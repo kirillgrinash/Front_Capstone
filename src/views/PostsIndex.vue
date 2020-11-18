@@ -1,33 +1,86 @@
 <template>
-  <div id="main">
+	<div id="app">
 
-  <!-- Post -->
-    <article class="post">
-      <div v-for="post in posts">
-        <header>
-          <div class="title">
-            <h2><a href="single.html">{{ post.name }}</a></h2>
-            <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
-          </div>
-          <div class="meta">
-            <time class="published" datetime="2015-11-01">November 1, 2015</time>
-            <a href="#" class="author"><span class="name">{{ post.user }}</span><img v-bind:src="post.user" v-bind:alt="post.user" /></a>
-          </div>
-        </header>
-        <a href="single.html" class="image featured"><img v-bind:src="post.image" v-bind:alt="post.name" /></a>
-        <p>{{ post.body }}</p>
-        <footer>
-          <ul class="actions">
-            <li><a href="single.html" class="button large">Continue Reading</a></li>
-          </ul>
-          <ul class="stats">
-            <li><a href="#">General</a></li>
-            <li><a href="#" class="icon solid fa-heart">28</a></li>
-            <li><a href="#" class="icon solid fa-comment">128</a></li>
-          </ul>
-        </footer>
-      </div>
-    </article>
+<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="#">
+											<h3>Lorem ipsum</h3>
+											<p>Feugiat tempus veroeros dolor</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Dolor sit amet</h3>
+											<p>Sed vitae justo condimentum</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Feugiat veroeros</h3>
+											<p>Phasellus sed ultricies mi congue</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Etiam sed consequat</h3>
+											<p>Porta lectus amet ultricies</p>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Actions -->
+							<section>
+								<ul class="actions stacked">
+									<li><a href="#" class="button large fit">Log In</a></li>
+								</ul>
+							</section>
+
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+								<!-- Post -->
+			<article class="post">
+				<div v-for="post in posts">
+					<header>
+						<div class="title">
+							<h2><a href="single.html">{{ post.name }}</a></h2>
+							<!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+						</div>
+						<div class="meta">
+							<time class="published" datetime="2015-11-01">November 1, 2015</time>
+							<a href="#" class="author"><span class="name">{{ post.user_name }}</span><img v-bind:src="post.user_picture" v-bind:alt="post.user_name" /></a>
+						</div>
+					</header>
+					<a href="single.html" class="image featured"><img v-bind:src="post.image" v-bind:alt="post.name" /></a>
+					<p>{{ post.body }}</p>
+					<footer>
+						<ul class="actions">
+							<li><a href="single.html" class="button large">Continue Reading</a></li>
+						</ul>
+						<ul class="stats">
+							<li><a href="#">General</a></li>
+							<li><a href="#" class="icon solid fa-heart">28</a></li>
+							<li><a href="#" class="icon solid fa-comment">128</a></li>
+						</ul>
+					</footer>
+				</div>
+			</article>
+
 
 						<!-- Post -->
 						<!--
@@ -349,6 +402,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							</ul>
 
 					</div>
+		
+	</div>
   <!-- <div class="posts-index">
     <h1>All Posts</h1>
     <div v-for="post in posts">
@@ -371,7 +426,8 @@ export default {
   created: function() {
     axios.get("/api/posts").then(response => {
       console.log("posts index", response);
-      this.posts = response.data;
+			this.posts = response.data;
+			this.$parent.message = "Learn More";
     });
   },
   methods: {},
