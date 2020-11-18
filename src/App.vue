@@ -60,26 +60,26 @@
 												<h3><a href="single.html">Bobby Grinash</a></h3>
 												
 											</header>
-											<a href="single.html" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<line-chart :data="data" />
 										</article>
 
 									<!-- Mini Post -->
-										<article class="mini-post">
+										<!-- <article class="mini-post">
 											<header>
 												<h3><a href="single.html">Daisy Grinash</a></h3>
 												
 											</header>
 											<a href="single.html" class="image"><img src="images/pic05.jpg" alt="" /></a>
-										</article>
+										</article> -->
 
 									<!-- Mini Post -->
-										<article class="mini-post">
+										<!-- <article class="mini-post">
 											<header>
 												<h3><a href="single.html">Oliver Grinash</a></h3>
 												
 											</header>
 											<a href="single.html" class="image"><img src="images/pic06.jpg" alt="" /></a>
-										</article>
+										</article> -->
 
 								</div>
 							</section>
@@ -153,7 +153,6 @@
 									<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
 									<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
-								<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
 							</section>
 
 					</section>
@@ -164,11 +163,25 @@
 <style>
 </style>
 <script>
+import Vue from 'vue';
+import Chartkick from 'vue-chartkick';
+import Chart from 'chart.js';
+
+Vue.use(Chartkick.use(Chart))
+
 export default {
   data: function () {
     return {
-      message: "hello"
-    }
-  }
-}
+      message: "hello",
+      data: [
+        {name: 'Happy', data: {'2020-11-17 01:00:00 -0800': 7, '2020-11-17 02:00:00 -0800': 1, '2020-11-17 30:00:00 -0800': 1, '2020-11-17 04:00:00 -0800': 1, '2020-11-17 05:00:00 -0800': 1,'2020-11-17 06:00:00 -0800': 1, '2020-11-17 07:00:00 -0800': 1, '2020-11-17 08:00:00 -0800': 1, '2020-11-18 09:00:00 -0800': 5}},
+        {name: 'Angry', data: {'2020-11-17 01:00:00 -0800': 5, '2020-11-17 02:00:00 -0800': 1, '2020-11-17 30:00:00 -0800': 1, '2020-11-17 04:00:00 -0800': 1, '2020-11-17 05:00:00 -0800': 1,'2020-11-17 06:00:00 -0800': 1, '2020-11-17 07:00:00 -0800': 1, '2020-11-17 08:00:00 -0800': 1, '2020-11-18 09:00:00 -0800': 6}},
+        {name: 'Sad', data: {'2020-11-17 01:00:00 -0800': 2, '2020-11-17 02:00:00 -0800': 1, '2020-11-17 30:00:00 -0800': 1, '2020-11-17 04:00:00 -0800': 1, '2020-11-17 05:00:00 -0800': 1,'2020-11-17 06:00:00 -0800': 1, '2020-11-17 07:00:00 -0800': 1, '2020-11-17 08:00:00 -0800': 1, '2020-11-18 09:00:00 -0800': 4}},
+        {name: 'Disgusted', data: {'2020-11-17 01:00:00 -0800': 3, '2020-11-17 02:00:00 -0800': 1, '2020-11-17 30:00:00 -0800': 1, '2020-11-17 04:00:00 -0800': 1, '2020-11-17 05:00:00 -0800': 1,'2020-11-17 06:00:00 -0800': 1, '2020-11-17 07:00:00 -0800': 1, '2020-11-17 08:00:00 -0800': 1, '2020-11-18 09:00:00 -0800': 1}},
+        {name: 'Surprised', data: {'2020-11-17 01:00:00 -0800': 1, '2020-11-17 02:00:00 -0800': 1, '2020-11-17 30:00:00 -0800': 1, '2020-11-17 04:00:00 -0800': 1, '2020-11-17 05:00:00 -0800': 1,'2020-11-17 06:00:00 -0800': 1, '2020-11-17 07:00:00 -0800': 1, '2020-11-17 08:00:00 -0800': 1, '2020-11-18 09:00:00 -0800': 2}},
+      ]
+    };
+  },
+};
 </script>
+

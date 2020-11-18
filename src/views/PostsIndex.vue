@@ -428,6 +428,8 @@ export default {
       console.log("posts index", response);
 			this.posts = response.data;
 			this.$parent.message = "Learn More";
+			this.$parent.datafirst = "Learn More";
+
     });
   },
   methods: {},

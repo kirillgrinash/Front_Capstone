@@ -10,7 +10,6 @@ import WebcamExample from "../views/WebcamExample.vue";
 import Juniors from "../views/JuniorsIndex.vue";
 
 
-
 Vue.use(VueRouter)
 
 const routes = [
